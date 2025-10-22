@@ -12,13 +12,10 @@
             <p class="text-lg text-blue-700 font-light">Encuentra tu próximo destino</p>
         </div>
 
-        <!-- Main Card -->
         <main id="ppal" class="bg-white border border-blue-200 rounded-2xl p-10 shadow-sm">
 
             <form action="{{ route('vuelos.buscar') }}" method="POST" class="space-y-10">
                 @csrf
-
-                <!-- Tipo de vuelo -->
                 <div class="flex gap-4 justify-center pb-6 border-b border-blue-100">
                     <button type="button" id="ida"
                         class="px-10 py-3.5 border-2 border-blue-900 text-blue-900 font-medium rounded-xl hover:bg-blue-900 hover:text-white transition-all duration-200 min-w-[160px]">
@@ -41,7 +38,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
                             <input type="search" id="origen" placeholder="Ciudad de origen" autocomplete="off"
-                                class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 placeholder-blue-400 font-medium transition-colors duration-200">
+                                class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 placeholder-blue-400 font-medium transition-colors duration-200" value="{{old('origen', $Ciudad->nombre ?? '')}}">
                             <input type="hidden" id="origen_id" name="origen" required>
                         </div>
                         <ol id="lista1" class="absolute w-full mt-2 bg-white border-2 border-blue-300 rounded-xl max-h-64 overflow-y-auto hidden z-20 shadow-lg">

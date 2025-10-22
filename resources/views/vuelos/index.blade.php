@@ -40,8 +40,8 @@
                 
             </div>
             <div>
-                <input type="date" id="fecha_ida" placeholder="Fecha ida">
-                <input type="date" id="fecha_regreso" placeholder="Fecha regreso" disabled>
+                <input type="date" id="fecha_ida" placeholder="Fecha ida" min="2025-10-23" max="2025-12-23">
+                <input type="date" id="fecha_regreso" placeholder="Fecha regreso" min="2025-10-23" max="2025-12-23" disabled>
             </div>
             <div>
                 <input type="numeric">

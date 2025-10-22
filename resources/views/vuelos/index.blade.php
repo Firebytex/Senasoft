@@ -38,10 +38,10 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
                             <input type="search" id="origen" placeholder="Ciudad de origen" autocomplete="off"
-                                class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 placeholder-blue-400 font-medium transition-colors duration-200" value="{{old('origen', $Ciudad->nombre ?? '')}}">
+                                class="w-full pl-12 pr-4 py-4 border-b-2 border-blue-900 focus:outline-none text-blue-900 placeholder-blue-900 font-medium transition-colors duration-200" value="{{old('origen', $Ciudad->nombre ?? '')}}">
                             <input type="hidden" id="origen_id" name="origen" required>
                         </div>
-                        <ol id="lista1" class="absolute w-full mt-2 bg-white border-2 border-blue-300 rounded-xl max-h-64 overflow-y-auto hidden z-20 shadow-lg">
+                        <ol id="lista1" class="absolute w-full mt-2 bg-white border-2 border-blue-900 rounded-xl max-h-64 overflow-y-auto hidden z-20 shadow-lg">
                             @foreach ($lugares as $lugar)
                                 <li value="{{ $lugar->id }}" class="px-5 py-3.5 hover:bg-blue-50 cursor-pointer text-blue-900 border-b border-blue-100 last:border-b-0 transition-colors duration-150 font-medium">
                                     {{ $lugar->nombre }}
@@ -58,10 +58,10 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                             </svg>
                             <input type="search" id="destino" placeholder="Ciudad de destino" autocomplete="off"
-                                class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 placeholder-blue-400 font-medium transition-colors duration-200">
+                                class="w-full pl-12 pr-4 py-4 border-b-2 border-blue-900 focus:outline-none text-blue-900 placeholder-blue-900 font-medium transition-colors duration-200">
                             <input type="hidden" id="destino_id" name="destino" required>
                         </div>
-                        <ol id="lista2" class="absolute w-full mt-2 bg-white border-2 border-blue-300 rounded-xl max-h-64 overflow-y-auto hidden z-20 shadow-lg">
+                        <ol id="lista2" class="absolute w-full mt-2 bg-white border-2 border-blue-900 rounded-xl max-h-64 overflow-y-auto hidden z-20 shadow-lg">
                             @foreach ($lugares as $lugar)
                                 <li value="{{ $lugar->id }}" class="px-5 py-3.5 hover:bg-blue-50 cursor-pointer text-blue-900 border-b border-blue-100 last:border-b-0 transition-colors duration-150 font-medium">
                                     {{ $lugar->nombre }}
@@ -80,7 +80,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                             </svg>
                             <input type="date" id="fecha_ida" name="fecha_ida" min="2025-10-23" max="2025-12-23" required
-                                class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 font-medium transition-colors duration-200">
+                                class="w-full pl-12 pr-4 py-4 border-b-2 border-blue-900 focus:outline-none text-blue-900 font-medium transition-colors duration-200">
                         </div>
                     </div>
                     <div>
@@ -90,20 +90,20 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                             </svg>
                             <input type="date" id="fecha_regreso" name="fecha_regreso" min="2025-10-23" max="2025-12-23" disabled
-                                class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 disabled:bg-blue-50 disabled:text-blue-400 disabled:border-blue-100 font-medium transition-colors duration-200">
+                                class="w-full pl-12 pr-4 py-4 border-b-2 border-blue-900  focus:outline-none text-blue-900 disabled:bg-blue-50 disabled:text-blue-400 disabled:border-blue-100 font-medium transition-colors duration-200">
                         </div>
                     </div>
                 </div>
 
                 <!-- Pasajeros -->
-                <div class="max-w-xs">
+                <div class="w-full md:w-[48%]">
                     <label class="block text-sm font-semibold text-blue-900 mb-3 uppercase tracking-wide text-xs">Pasajeros</label>
                     <div class="relative">
                         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                         </svg>
                         <input type="number" id="pasajeros" name="pasajeros" min="1" max="5" value="1" required
-                            class="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-xl focus:outline-none focus:border-blue-600 text-blue-900 font-medium transition-colors duration-200">
+                            class="w-full pl-12 pr-4 py-4 border-b-2 border-blue-900  focus:outline-none text-blue-900 font-medium transition-colors duration-200">
                     </div>
                 </div>
 

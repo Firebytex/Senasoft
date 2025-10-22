@@ -35,8 +35,8 @@ class Reserva extends Model
         return $this->belongsTo(Vuelo::class,'vuelo_regreso_id');
     }
 
-    //una reserva tiene muchos pasajeros 
+    // Una reserva tiene muchos pasajeros (relación muchos a muchos)
     public function pasajeros() {
-        return $this->hasMany(Pasajero::class);
+        return $this->belongsToMany(Pasajero::class, 'pasajero_reserva');
     }
 }

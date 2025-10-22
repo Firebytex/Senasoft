@@ -21,4 +21,13 @@ class Pasajero extends Model
         'correo'
     ];
 
+    protected $casts = [
+        'fecha_nacimiento' => 'date',
+        'es_infante' => 'boolean'
+    ];
+
+    // Un pasajero puede estar en muchas reservas
+    public function reservas() {
+        return $this->belongsToMany(Reserva::class, 'pasajero_reserva');
+    }
 }

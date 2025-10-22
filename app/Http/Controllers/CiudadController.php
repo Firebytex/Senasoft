@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Vuelo;
-class VueloController extends Controller
+use App\Models\Ciudad;
+
+class CiudadController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
+       $lugares = Ciudad::all();
+        return view('vuelos.index', compact('lugares'));
     }
 
     /**

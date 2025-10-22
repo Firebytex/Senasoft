@@ -17,19 +17,22 @@
         <figure>
             <img src="" alt="">
         </figure>
-        <section>
+        <form>
             <div>
-                <button type="button" onclick="habilitar()" class="border border-amber-300" >Solo ida</button>
-                <button type="button" onclick="deshabilitar()" class="border border-amber-300">Ida y vuelta</button>
+                <button type="button" class="border border-amber-300" id="ida" >Solo ida</button>
+                <button type="button" class="border border-amber-300" id="ida_vuelta">Ida y vuelta</button>
             </div>
             <div>
                 <input type="search" id="origen" name="origen" placeholder="Origen">
-                <ol id="lista1">
-                    <li value=""></li>
+                <ol id="lista1" class="hidden">
+                    @foreach ($lugares as $lugar)
+                     <li value="{{ $lugar->id }}" class="hidden">{{ $lugar -> nombre }}</li>   
+                    @endforeach
+                    
                 </ol>
             
                 <input type="search" id="destino" name="destino" placeholder="Destino">
-                <ol id="lista2">
+                <ol id="lista2" class=" hidden">
                     <li value=""></li>
                 </ol>
                 
@@ -41,7 +44,8 @@
             <div>
                 <input type="numeric">
             </div>
-        </section>
+            <button >Buscar</button>
+        </form>
     </main>
  <script src="{{ asset("js/buscar.js") }}"></script>   
 </body>

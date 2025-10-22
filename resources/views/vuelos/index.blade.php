@@ -2,14 +2,18 @@
 
 @section('content')
 
-<div class="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16 px-4">
+<div class="min-h-screen bg-neutral-100 py-16 px-4">
     <div class="max-w-5xl mx-auto">
 
+        <div class="container mx-auto p-4">
+                <img src="{{ asset('logos/SenaAir.png') }}" alt="Descripción de la imagen" class="w-40 h-auto mx-auto rounded-lg">
+        </div>
+
+
+            
         <!-- Header -->
         <div class="text-center mb-16">
-            <h1 class="text-5xl font-light text-blue-900 mb-3 tracking-wide">Buscar Vuelos</h1>
-            <div class="w-24 h-1 bg-blue-900 mx-auto mb-4"></div>
-            <p class="text-lg text-blue-700 font-light">Encuentra tu próximo destino</p>
+            <h1 class="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Sena Air</span></h1>
         </div>
 
         <main id="ppal" class="bg-white border border-blue-200 rounded-2xl p-10 shadow-sm">
@@ -18,11 +22,11 @@
                 @csrf
                 <div class="flex gap-4 justify-center pb-6 border-b border-blue-100">
                     <button type="button" id="ida"
-                        class="px-10 py-3.5 border-2 border-blue-900 text-blue-900 font-medium rounded-xl hover:bg-blue-900 hover:text-white transition-all duration-200 min-w-[160px]">
+                        class="px-10 py-3.5 border-2 border-blue-900 text-blue-900 font-medium rounded-xl hover:bg-blue-900 hover:text-white transition-all duration-200 min-w-[160px] hover:cursor-pointer">
                         Solo ida
                     </button>
                     <button type="button" id="ida_vuelta"
-                        class="px-10 py-3.5 border-2 border-blue-900 text-blue-900 font-medium rounded-xl hover:bg-blue-900 hover:text-white transition-all duration-200 min-w-[160px]">
+                        class="px-10 py-3.5 border-2 border-blue-900 text-blue-900 font-medium rounded-xl hover:bg-blue-900 hover:text-white transition-all duration-200 min-w-[160px] hover:cursor-pointer">
                         Ida y vuelta
                     </button>
                 </div>

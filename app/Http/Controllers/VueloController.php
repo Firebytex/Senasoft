@@ -15,9 +15,9 @@ class VueloController extends Controller
     {
         $request->validate([
             'origen' => 'required|exists:ciudades,id',
-            'destino' => 'required|exists:ciudades,id',
+            'destino' => 'required|exists:ciudades,id|different:origen',
             'fecha_ida' => 'required|date',
-            'fecha_regreso' => 'nullable|date|after:fecha_ida',
+            'fecha_regreso' => 'nullable|date|after_or_equal:fecha_ida',
             'pasajeros' => 'required|integer|min:1|max:5'
         ]);
 

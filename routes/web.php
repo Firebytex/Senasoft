@@ -15,6 +15,8 @@ Route::get('/', function () {
 Route::get('/',[CiudadController::class,'index'])
     ->name('ciudades.lista');
 
+
+
 Route::resource('/ciudad',CiudadController::class);
 //ruta administrador "CRUD" de vuelos 
 Route::resource('/admin',AdminController::class);

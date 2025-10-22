@@ -132,17 +132,24 @@ buscar_origen.addEventListener("keyup", ()=>{
 function validar(){
 let buscar = document.querySelector("#buscar");
 buscar.addEventListener("click",(e)=>{
-    e.preventDefault();
-    if(fecha2.value< fecha1.value){
+    e.preventDefault()
+    if(fecha2.disabled === false){
+        if(fecha2.value < fecha1.value){
         console.log("entro en el condicional")
         alert("la fecha de ida no puede ser mayor a la fecha de vuelta, por favor digite nuevamente los campos");
-    }
+    }else if (buscar_origen.value.trim() !== "" &&
+            buscar_destino.value.trim() !== ""
+        ) 
+    if (buscar_origen.value === buscar_destino.value) {
+                alert("El destino no puede ser igual al origen.");
+    } 
+}else {
+                buscar.submit(); 
+            }
+    
+})}
 
-    if(buscar_origen.value === buscar_destino.value){
-        alert("El destino no puede ser igual al origen, llene nuevamente los campos");
-    }
-})
-}
+
 
 
 barra2();

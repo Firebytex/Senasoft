@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -29,11 +30,10 @@
         @endforeach
     @endif
 
-
-
+    <script src="{{ mix('js/app.js') }}"></script>
     @yield('content')
 
-
+    
 </body>
 
 </html>

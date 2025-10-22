@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Vuelo;
 class VueloController extends Controller
 {
     /**
@@ -11,7 +11,8 @@ class VueloController extends Controller
      */
     public function index()
     {
-        
+        $vuelos = Vuelo::all();
+        return view('vuelos.index', compact('vuelos'));
     }
 
     /**

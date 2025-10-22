@@ -19,26 +19,27 @@
         </figure>
         <section>
             <div>
-                <button>Solo ida</button>
-                <button>Ida y vuelta</button>
+                <button type="button" onclick="habilitar()" class="border border-amber-300" >Solo ida</button>
+                <button type="button" onclick="deshabilitar()" class="border border-amber-300">Ida y vuelta</button>
             </div>
             <div>
-                <input type="search" id="origen" name="origen">
+                <input type="search" id="origen" name="origen" placeholder="Origen">
                 <ol id="lista1">
                     <li value=""></li>
                 </ol>
             
-                <input type="search" id="destino" name="destino">
+                <input type="search" id="destino" name="destino" placeholder="Destino">
                 <ol id="lista2">
                     <li value=""></li>
                 </ol>
                 
             </div>
             <div>
-                <input type="date"><input type="date">
+                <input type="date" id="fecha_ida" placeholder="Fecha ida">
+                <input type="date" id="fecha_regreso" placeholder="Fecha regreso" disabled>
             </div>
             <div>
-                <input type="numeric" >
+                <input type="numeric">
             </div>
         </section>
     </main>

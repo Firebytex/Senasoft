@@ -25,25 +25,53 @@ function barra1(){
     const li = document.getElementsByTagName("li");
     const origen = document.querySelector("#origen");
 
+    lista.classList.add("hidden");
+
     origen.addEventListener("keyup",()=>{
         let texto = origen.value.toLowerCase();
-
         Array.from(li).forEach(e=>{
             let resultados = e.textContent.toLowerCase();
+            
+            e.classList.add("hidden");
             if(texto !== "" && resultados.startsWith(texto)){
                 console.log(e)
-                lista.classList.toggle = ("block");
-                e.classList.toggle =("block");
+                lista.classList.remove("hidden");
+                e.classList.remove("hidden");
             }
-            else{
-                lista.style.display =("none");
+        
+        })
+
+    })
+    }
+
+function barra2(){
+    const lista = document.querySelector("#lista2");
+    const li = document.getElementsByTagName("li");
+    const origen = document.querySelector("#destino");
+
+    lista.classList.add("hidden");
+
+    origen.addEventListener("keyup",()=>{
+        let texto = origen.value.toLowerCase();
+        Array.from(li).forEach(e=>{
+            let resultados = e.textContent.toLowerCase();
+
+            e.classList.add("hidden");
+            if(texto !== "" && resultados.startsWith(texto)){
+                console.log(e)
+                lista.classList.remove("hidden");
+                e.classList.remove("hidden");
             }
+        
         })
 
     })
 
-    
 }
+
+barra2()
+    
+
  barra1();
 
 

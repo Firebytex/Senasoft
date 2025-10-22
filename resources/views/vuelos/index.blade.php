@@ -24,16 +24,18 @@
             </div>
             <div>
                 <input type="search" id="origen" name="origen" placeholder="Origen">
-                <ol id="lista1" class="hidden">
+                <ol id="lista1" class="">
                     @foreach ($lugares as $lugar)
-                     <li value="{{ $lugar->id }}" class="hidden">{{ $lugar -> nombre }}</li>   
+                     <li value="{{ $lugar->id }}" class="" >{{ $lugar -> nombre }}</li>   
                     @endforeach
                     
                 </ol>
             
                 <input type="search" id="destino" name="destino" placeholder="Destino">
-                <ol id="lista2" class=" hidden">
-                    <li value=""></li>
+                <ol id="lista2" class="">
+                    @foreach ($lugares as $lugar)
+                    <li value="{{ $lugar->id }}" class="" >{{ $lugar -> nombre }}</li>   
+                     @endforeach
                 </ol>
                 
             </div>

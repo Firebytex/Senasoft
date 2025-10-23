@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- presentacion  --}}
-<body class="h-screen w-full flex items-center justify-center">
+<body class="h-screen w-full flex items-center justify-center flex-col">
     <main class="w-[clamp(210px,83%,700px)] bg-gray-200 rounded-md p-4">
         <section>
         <h2 class="text-[18px] font-light text-blue-900">Informacion del cliente</h2>

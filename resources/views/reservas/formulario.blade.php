@@ -96,39 +96,7 @@
                 <input type="hidden" name="vuelo_regreso_id" value="{{ $vueloRegreso->id }}">
             @endif
 
-            <!-- Datos del Pagador -->
-            <div class="bg-white rounded-2xl shadow-sm border border-blue-200 p-6">
-                <h2 class="text-xl font-bold text-blue-900 mb-6">Datos del Pagador</h2>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div>
-                        <label class="block text-sm font-semibold text-blue-900 mb-2">Nombre Completo</label>
-                        <input type="text" name="pagador_nombre" value="{{ old('pagador_nombre') }}" required
-                            class="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-600 transition-colors duration-200">
-                        @error('pagador_nombre')
-                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-semibold text-blue-900 mb-2">Correo Electronico</label>
-                        <input type="email" name="pagador_correo" value="{{ old('pagador_correo') }}" required
-                            class="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-600 transition-colors duration-200">
-                        @error('pagador_correo')
-                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-semibold text-blue-900 mb-2">Telefono</label>
-                        <input type="tel" name="pagador_telefono" value="{{ old('pagador_telefono') }}" required
-                            class="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-600 transition-colors duration-200">
-                        @error('pagador_telefono')
-                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- Datos de los Pasajeros -->
             <div class="bg-white rounded-2xl shadow-sm border border-blue-200 p-6">
@@ -249,6 +217,42 @@
                     @endfor
                 </div>
             </div>
+
+
+            <!-- Datos del Pagador -->
+            <div class="bg-white rounded-2xl shadow-sm border border-blue-200 p-6">
+                <h2 class="text-xl font-bold text-blue-900 mb-6">Datos del Pagador</h2>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-blue-900 mb-2">Nombre Completo</label>
+                        <input type="text" name="pagador_nombre" value="{{ old('pagador_nombre') }}" required
+                            class="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-600 transition-colors duration-200">
+                        @error('pagador_nombre')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-blue-900 mb-2">Correo Electronico</label>
+                        <input type="email" name="pagador_correo" value="{{ old('pagador_correo') }}" required
+                            class="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-600 transition-colors duration-200">
+                        @error('pagador_correo')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-blue-900 mb-2">Telefono</label>
+                        <input type="tel" name="pagador_telefono" value="{{ old('pagador_telefono') }}" required
+                            class="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-600 transition-colors duration-200">
+                        @error('pagador_telefono')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+
 
             <!-- Metodo de Pago -->
             <div class="bg-white rounded-2xl shadow-sm border border-blue-200 p-6">

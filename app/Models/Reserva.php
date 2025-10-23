@@ -12,6 +12,7 @@ class Reserva extends Model
 
     protected $fillable = [
         'codigo_reserva',
+        'persona_id',
         'vuelo_ida_id',
         'vuelo_regreso_id',
         'pagador_nombre',
@@ -22,21 +23,29 @@ class Reserva extends Model
         'valor_total'
     ];
 
-        //relaciones
+    // Relaciones
 
-    //UNA RESERVA PERTENECE A UN VUELO
-    public function vueloIdda() {
-        return $this->belongsTo(Vuelo::class,'vuelo_ida_id');
-
+    // Una reserva pertenece a una persona (opcional)
+    public function persona()
+    {
+        return $this->belongsTo(Persona::class);
     }
 
-    //una reserva perteneca un vuelo de regreso
-    public function vueloRegreso() {
-        return $this->belongsTo(Vuelo::class,'vuelo_regreso_id');
+    // Una reserva pertenece a un vuelo de ida
+    public function vueloIdda()
+    {
+        return $this->belongsTo(Vuelo::class, 'vuelo_ida_id');
+    }
+
+    // Una reserva pertenece a un vuelo de regreso
+    public function vueloRegreso()
+    {
+        return $this->belongsTo(Vuelo::class, 'vuelo_regreso_id');
     }
 
     // Una reserva tiene muchos pasajeros (relación muchos a muchos)
-    public function pasajeros() {
+    public function pasajeros()
+    {
         return $this->belongsToMany(Pasajero::class, 'pasajero_reserva');
     }
 }

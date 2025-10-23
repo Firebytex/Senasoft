@@ -51,8 +51,16 @@ class VueloSeeder extends Seeder
             ['origen' => 'Santa Marta', 'destino' => 'Bogotá', 'fecha' => '2025-10-30', 'hora' => '18:00:00', 'precio' => 220000],
 
             // Bucaramanga
-            ['origen' => 'Bogotá', 'destino' => 'Bucaramanga', 'fecha' => '2025-10-31', 'hora' => '10:00:00', 'precio' => 190000],
-            ['origen' => 'Bucaramanga', 'destino' => 'Bogotá', 'fecha' => '2025-10-31', 'hora' => '15:00:00', 'precio' => 185000],
+            ['origen' => 'Bogotá', 'destino' => 'Bucaramanga', 'fecha' => '2025-10-23', 'hora' => '10:00:00', 'precio' => 190000],
+            ['origen' => 'Bucaramanga', 'destino' => 'Bogotá', 'fecha' => '2025-10-24', 'hora' => '15:00:00', 'precio' => 185000],
+
+
+            /*
+            //S
+            ['origen' => 'Medellín', 'destino' => 'Cali', 'fecha' => '2025-10-23', 'hora' => '10:00:00', 'precio' => 190000],
+            ['origen' => 'Cali', 'destino' => 'Medellín', 'fecha' => '2025-10-24', 'hora' => '15:00:00', 'precio' => 185000],
+
+            */
         ];
 
         foreach ($vuelos as $vueloData) {

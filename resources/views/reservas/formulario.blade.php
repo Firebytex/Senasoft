@@ -80,7 +80,7 @@
                         <p class="text-blue-600">Total para {{ $pasajeros }} {{ $pasajeros == 1 ? 'pasajero' : 'pasajeros' }}</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-2xl font-bold text-blue-900">
+                        <p class="text-lg font-bold text-blue-900">
                             ${{ number_format(($vueloIda->precio + ($vueloRegreso ? $vueloRegreso->precio : 0)) * $pasajeros, 0, ',', '.') }}
                         </p>
                     </div>

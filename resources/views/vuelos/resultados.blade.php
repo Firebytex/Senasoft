@@ -33,7 +33,7 @@
                             <div class="grid md:grid-cols-5 gap-4 items-center">
                                 <!-- Horario -->
                                 <div class="md:col-span-2">
-                                    <div class="flex items-center gap-4">
+                                    <div class="flex items-center justify-between gap-4">
                                         <div class="text-center">
                                             <p class="text-2xl font-bold text-blue-900">{{ \Carbon\Carbon::parse($vuelo->hora)->format('H:i') }}</p>
                                             <p class="text-sm text-blue-600">{{ $vuelo->ciudadOrigen->codigo }}</p>
@@ -42,13 +42,14 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                         </svg>
                                         <div class="text-center">
+                                            
                                             <p class="text-sm text-blue-600">{{ $vuelo->ciudadDestino->codigo }}</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Detalles del vuelo -->
-                                <div>
+                                <div class="flex flex-col items-center">
                                     <p class="text-sm text-blue-700 font-medium">{{ $vuelo->modeloAvion->nombre }}</p>
                                     <p class="text-xs text-blue-500">{{ $vuelo->asientos_disponibles }} asientos disponibles</p>
                                 </div>

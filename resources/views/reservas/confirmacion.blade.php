@@ -1,6 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
+{{-- presentacion  --}}
 <body class="h-screen w-full flex items-center justify-center">
     <main class="w-[clamp(210px,83%,700px)] bg-gray-200 rounded-md p-4">
         <section>

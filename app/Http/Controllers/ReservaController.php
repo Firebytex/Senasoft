@@ -138,3 +138,5 @@ class ReservaController extends Controller
         return view('reservas.confirmacion', compact('reserva'));
     }
 }
+
+

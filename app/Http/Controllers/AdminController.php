@@ -15,7 +15,7 @@ class AdminController extends Controller
     //mostrar todos los vuelos 
     public function index()
     {   //paginar con ayudar del provider
-        $vuelos = Vuelo::paginate(10);
+        $vuelos = Vuelo::paginate(6);
 
         return view('admin.index',compact('vuelos'));
     }
@@ -34,13 +34,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'modelo_avion' => 'required|string|max:255',
-            'fecha_vuelo' => 'required|date',
-            'precio_por_pasajero' => 'required|numeric',
-            'filas' => 'required|numeric',
-            'columnas' => 'required|numeric'
-        ]);
+        
 
 
         Vuelo::create($request->all());

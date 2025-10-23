@@ -14,8 +14,8 @@ class AdminController extends Controller
 
     //mostrar todos los vuelos 
     public function index()
-    {
-        $vuelos = Vuelo::all();
+    {   //paginar con ayudar del provider
+        $vuelos = Vuelo::paginate(10);
 
         return view('admin.index',compact('vuelos'));
     }

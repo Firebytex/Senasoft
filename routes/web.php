@@ -6,12 +6,10 @@ use App\Http\Controllers\VueloController;
 use App\Http\Controllers\ReservaController;
 use Illuminate\Support\Facades\Route;
 
-/*
-Route::get('/', function () {
-    return view('vuelos.index');
-});
 
-*/
+Route::get('/vuelosreserva',[ VueloController::class,'index'])
+    ->name('vuelos.index');
+
 
 Route::get('/',[CiudadController::class,'index'])
     ->name('ciudades.lista');
@@ -27,6 +25,9 @@ Route::post('/reservas', [ReservaController::class, 'store'])
 
 Route::get('/reservas/{id}/confirmacion', [ReservaController::class, 'confirmacion'])
     ->name('reservas.confirmacion');
+
+
+
 
 Route::resource('/ciudad',CiudadController::class);
 //ruta administrador "CRUD" de vuelos

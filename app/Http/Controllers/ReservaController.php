@@ -114,11 +114,13 @@ class ReservaController extends Controller
                 $vueloRegreso->decrement('asientos_disponibles', $numPasajeros);
             }
 
+            //confirmamos la transaccion
             DB::commit();
 
             return redirect()->route('reservas.confirmacion', $reserva->id)
                 ->with('success', 'Reserva creada exitosamente');
 
+            //en caso de error  capturamos error ,y cancelamos la transaccion 
         } catch (\Exception $e) {
             DB::rollBack();
             return back()->with('error', 'Error al crear la reserva: ' . $e->getMessage())

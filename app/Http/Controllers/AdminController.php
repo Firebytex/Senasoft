@@ -10,10 +10,14 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+
+    //mostrar todos los vuelos 
     public function index()
     {
-        
-        return view('admin.index');
+        $vuelos = Vuelo::all();
+
+        return view('admin.index',compact('vuelos'));
     }
 
     /**
